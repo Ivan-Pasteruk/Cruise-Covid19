@@ -1,0 +1,798 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #000;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+	font-family: CenturyGothic, sans-serif;
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #e6618c;
+	text-decoration: underline;
+}
+a:hover {
+	color: #fdf208;
+	text-decoration:none;
+}
+a:focus, a:active {
+	color: #c83867;
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+.center-block {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+}
+
+.logo-header {
+}
+
+.inf-header {
+}
+
+.inf-header p {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 1.5em;
+	color: #0b3f50;
+	font-family: 'CenturyGothic'
+}
+
+.inf-header p span {
+	text-transform: uppercase;
+}
+
+.inf-header .phone-header {
+	font-size: 2.4375em;
+	/*font-family: 'CenturyGothic'*/
+	font-weight: bold;
+	color: #e8494b;
+	margin-left: 15px;
+}
+.background-pic {
+	background-image: url(images/header-pic.jpg);
+	background-size: cover;
+	background-position: center center;
+	min-height: 700px;
+	text-align: center;
+}
+
+.background-pic h1 {
+	font-size: 7.5em;
+	font-family: 'Oswald';
+	font-weight: 300;
+	color: #ffffff;
+	padding: 100px 0 20px 0;
+}
+
+.background-pic h1 span {
+	font-weight: bold;
+}
+
+.background-pic h2 {
+	font-size: 3.75em;
+	font-family: 'Oswald';
+	font-weight: 300;
+	color: #ffffff;
+}
+
+.form-block-header {
+	min-height: 680px;
+}
+
+.form-block-header form {
+	width: 100%;
+	max-height: 640px;
+	background: #e8494b;
+	margin-top: -100px;
+	position: relative;
+	padding: 40px 55px 60px 55px;
+	box-sizing: border-box;
+}
+
+.form-block-header form h2,p,h3 {
+	color: #ffffff;
+	text-align: center;
+	font-family: 'Oswald';
+	font-size: 2.875em;
+	z-index: 50;
+	font-weight: 300;
+}
+
+.form-block-header form p {
+	font-weight: bold;
+	position: relative;
+}
+
+.form-block-header p span {
+	background: #e8494b;
+	z-index: 10;
+	padding: 0 20px 0 20px;
+}
+
+.form-block-header span:before {
+	content: "";
+	display: block;
+	position: absolute;
+	height: 2px; 
+	background: #ffffff;
+	width: 100%;
+	top: 50%;
+	z-index: -2;
+}
+
+.form-block-header form h3 {
+	margin-bottom: 40px;
+}
+
+input::-webkit-input-placeholder { 
+	color: #043f60; 
+}
+
+textarea::-webkit-input-placeholder { 
+	color: #043f60; 
+}
+
+.inputs-container {
+	overflow-x: hidden;
+}
+
+.inputs-container input {
+	width: 100%;
+	margin-bottom: 30px;
+	padding: 15px;
+	box-sizing: border-box;
+	text-transform: uppercase;
+	border: none;
+}
+
+.row {
+	display: flex;
+  	margin-left: -15px;
+  	margin-right: -15px;
+}
+
+.col {
+	padding-left: 15px;
+ 	padding-right: 15px;
+  	width: 33.33%;
+}
+
+.form-block-header textarea {
+	width: 100%;
+	padding: 15px 15px;
+	font-size: 1em;
+	font-family: 'Oswald';
+	text-transform: uppercase;
+	min-height: 150px;
+	box-sizing: border-box;
+	margin-bottom: 40px;
+	border: none;
+}
+
+.inputs-container .button-send-message {
+	-webkit-appearance: none;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	background: none;
+	border: 2px solid #ffffff;
+	color: #ffffff;
+	float: right;
+	cursor: pointer;
+	width: 31.5%;
+	padding: 15px;
+}
+
+.steps-block {
+	background: #f7f7f7;
+	min-height: 640px;
+}
+
+.steps-block h2 {
+	text-align: center;
+	font-family: 'Oswald';
+	font-weight: 400;
+	font-size: 4em;
+	color: #242424;
+	padding: 80px 0 80px 0;
+}
+
+.steps-block h2 span {
+	color: #025b78;
+	font-weight: 700;
+}
+
+.steps-container {
+	width: 100%;
+	display: flex;
+	margin-right: 60px;
+	box-sizing: border-box;
+}
+
+.steps-container .step-col {
+	width: 33%;
+}
+
+.steps-container .step {
+	font-size: 1.7em;
+	font-family: 'Lato';
+	font-weight: 700;
+	color: #acc3c9;
+	text-transform: uppercase;
+	float: left;
+}
+
+.steps-container .step span {
+	color: #e8494b;
+	font-size: 2.8em;
+}
+
+.steps-container img {
+	height: 150px;
+	margin-top: 50px;
+}
+
+.steps-container .inf-step {
+	color: #222222;
+	font-size: 1em;
+	font-family: 'Lato';
+	font-weight: 300;
+	margin-top: 20px;
+	width: 85%;
+}
+
+.steps-container .inf-step:before {
+	content: "";
+	width: 70px;
+	height: 2px;
+	background: #025b78;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.logo-block {
+	min-height: 420px;
+	text-align: center;
+}
+
+.logo-block img {
+	margin-top: 60px;
+	margin-bottom: 20px;
+}
+
+.logo-block p {
+	font-family: 'Oswald';
+	font-weight: 300;
+	font-size: 2.1em;
+	color: #252525;
+}
+
+.logo-block p span {
+	font-weight: bold;
+	font-size: 2.6em;
+	color: #025b78;
+}
+
+.partners-block {
+	background: #f7f7f7;
+	min-height: 650px;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.partners-block h2 {
+	font-family: 'Oswald';
+	font-weight: 400;
+	font-size: 3.5em;
+	color: #025b78;
+	text-align: center;
+	padding: 50px 0 50px 0;
+}
+
+.partners-container {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.partners-col {
+	max-width: 370px;
+	max-height: 340px;
+	display: inline-block;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.partners-col p {
+	font-family: 'CenturyGothic';
+	font-size: 1.8em;
+	color: #252525;
+	margin-top: 20px;
+}
+
+.form-block-bottom {
+	min-height: 600px;
+	background: #025b78;
+}
+
+.form-block-bottom form {
+	width: 100%;
+	position: relative;
+	padding: 40px 0 0 0;
+	box-sizing: border-box;
+}
+
+.form-block-bottom form h2,h3 {
+	color: #ffffff;
+	text-align: center;
+	font-family: 'Oswald';
+	font-size: 2.6em;
+	z-index: 50;
+	font-weight: 300;
+}
+
+.form-block-bottom form h3 {
+	font-weight: bold;
+	font-size: 3.6em;
+	margin-bottom: 40px;
+	position: relative;
+}
+
+.form-block-bottom h3 span {
+	background: #025b78;
+	z-index: 10;
+	padding: 0 20px 0 20px;
+}
+
+.form-block-bottom span:before {
+	content: "";
+	display: block;
+	position: absolute;
+	height: 2px; 
+	background: #ffffff;
+	width: 100%;
+	top: 50%;
+	z-index: -2;
+}
+
+.form-block-bottom textarea {
+	width: 100%;
+	padding: 15px 15px;
+	font-size: 1em;
+	font-family: 'Oswald';
+	text-transform: uppercase;
+	min-height: 150px;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+	border: none;
+}
+
+.inputs-container .button-send-message2 {
+	-webkit-appearance: none;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	background: #e8494b;
+	color: #ffffff;
+	float: right;
+	cursor: pointer;
+	width: 31.5%;
+	padding: 15px;
+}
+
+@media screen and (max-width:1210px) {
+
+.form-block-bottom {
+	min-height: 550px;
+	padding: 0 10px 0 10px;
+}
+
+@media screen and (max-width:980px) {
+	
+	.header {
+	display: inline-block;
+	height: 100px;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.logo-header {
+	width: 100%;
+	display: inline-block;
+}
+
+.inf-header {
+	width: 100%;
+	display: inline-block;
+}
+}
+
+@media screen and (max-width:530px) {
+
+.inf-header p {
+	font-size: 1em;
+	margin-top: 10px;
+}
+
+.inf-header .phone-header {
+	font-size: 1.8em;
+}
+}
+
+@media screen and (max-width:970px) {
+
+.background-pic h1 {
+	font-size: 6em;
+	padding: 0px 0 20px 0;
+}
+
+.form-block-header form {
+	margin-top: -280px;
+}
+
+.steps-block {
+	min-height: 420px;
+}
+
+.steps-block h2 {
+	font-size: 3.5em;
+	padding: 20px 0 20px 0;
+}
+
+.steps-container .step {
+	font-size: 1.3em;
+}
+
+.steps-container .step span {
+	font-size: 2em;
+}
+}
+
+@media screen and (max-width:880px) { 
+
+.partners-block {
+	min-height: 530px;
+}
+
+.partners-block h2 {
+	font-size: 3em;
+	padding: 20px 0 20px 0;
+}
+
+.partners-col p {
+	font-size: 1.5em;
+	margin-top: 10px;
+}	
+
+@media screen and (max-width:785px) { 
+
+.background-pic h1 {
+	font-size: 4em;
+}	
+
+.background-pic h2 {
+	font-size: 2.8em;
+}		
+
+.form-block-header form {
+	margin-top: -400px;
+}
+
+.steps-block {
+	min-height: 380px;
+}
+
+.steps-container img {
+	height: 100px;
+	margin-top: 50px;
+}
+}
+
+@media screen and (max-width:720px) { 
+
+.form-block-bottom form {
+	padding: 20px 0 0 0;
+}
+
+.form-block-bottom form h2,h3 {
+	font-size: 2em;
+}
+
+.form-block-bottom form h3 {
+	font-size: 2.6em;
+	margin-bottom: 20px;
+}
+
+.form-block-bottom {
+	min-height: 500px;
+	padding: 0 10px 0 10px;
+}
+
+@media screen and (max-width:600px) { 
+
+.background-pic h1 {
+	font-size: 2.5em;
+}	
+
+.background-pic h2 {
+	font-size: 1.8em;
+}		
+
+.form-block-header form {
+	margin-top: -510px;
+}
+
+.logo-block {
+	min-height: 220px;
+}
+
+.logo-block img {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.logo-block p {
+	font-size: 1.5em;
+}
+
+.logo-block p span {
+	font-size: 1.8em;
+}
+}
+
+@media screen and (max-width:392px) { 
+
+.background-pic h1 {
+	font-size: 2em;
+	padding: 0px 0 10px 0;
+}		
+
+.background-pic h2 {
+	font-size: 1.2em;
+}	
+
+.form-block-header form {
+	margin-top: -550px;
+}
+}		
+
+@media screen and (max-width:685px) { 
+
+.form-block-header form {
+	min-height: 700px;
+	padding: 20px 55px 60px 55px;
+}
+
+.form-block-header form h2,p,h3 {
+	font-size: 2.2em;
+}
+
+.form-block-header form h3 {
+	margin-bottom: 20px;
+}
+
+.inputs-container input {
+	font-size: 0.8em;
+}
+.form-block-header textarea {
+	font-size: 0.8em;
+}
+
+.inputs-container .button-send-message {
+	font-size: 0.9em;
+}
+
+.form-block-bottom textarea {
+	font-size: 0.8em;
+}
+}
+
+@media screen and (max-width:570px) { 
+
+.form-block-header form h2,p,h3 {
+	font-size: 1.8em;
+}
+
+.form-block-header p span {
+	padding: 0 5px 0 5px;
+}
+
+.col {
+  	width: 100%;
+}	
+
+.row {
+	display: inline-block;
+	width: 100%;
+}
+
+.inputs-container .button-send-message {
+	font-size: 1.2em;
+	float: none;
+	width: 100%;
+	display: inline-block;
+}
+
+.form-block-header textarea {
+	min-height: 100px;
+	margin-bottom: 20px;
+}
+
+.steps-block {
+	min-height: 350px;
+}
+
+.steps-block h2 {
+	font-size: 2.5em;
+	padding: 10px 0 10px 0;
+}
+
+.steps-container img {
+	margin-top: 50px;
+	display: block;
+}
+
+.steps-container .inf-step {
+	font-size: 0.8em;
+	margin-top: 20px;
+	width: 85%;
+}
+
+.form-block-bottom textarea {
+	min-height: 100px;
+}
+
+.inputs-container .button-send-message2 {
+	font-size: 1.2em;
+	width: 100%;
+}
+}
+
+@media screen and (max-width:384px) {
+
+.header { 
+	height: 110px;
+}
+
+.steps-block h2 {
+	font-size: 2em;
+	padding: 5px 0 5px 0;
+}
+
+.steps-container .step {
+	font-size: 1.2em;
+}
+
+.steps-container .step span {
+	font-size: 1.6em;
+}
+
+.steps-container .step-col {
+	margin-left: 5px;
+}
+
+.steps-container img {
+	height: 80px;
+}
+
+.partners-block h2 {
+	font-size: 2.2em;
+	padding: 10px 0 10px 0;
+}
+}
+
+@media screen and (max-width:520px) {
+
+.form-block-bottom h3 span {
+	padding: 0 5px 0 5px;
+}	
+
+.form-block-bottom form h2,h3 {
+	font-size: 1.3em;
+}
+
+.form-block-bottom form h3 {
+	font-size: 1.6em;
+	margin-bottom: 20px;
+}
+}
+
+@media screen and (max-width:686px) {
+
+.form-block-header {
+	min-height: 20px;
+}
+
+.form-block-header form {
+	min-height: 20px;
+	padding-bottom: 1px;
+}
+}
+
+
+
+
+
+
+
